@@ -10,7 +10,6 @@ from usp.tree import sitemap_tree_for_homepage
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-import os
 import json
 from datetime import datetime
 
