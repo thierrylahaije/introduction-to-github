@@ -35,7 +35,7 @@ brokenLinkLocation = []
 user_agent = {'User-agent': 'Mozilla/5.0'} 
 
 #git token
-token = "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"
+token = "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"
 
 #git headers authorization
 headers = {"Authorization" : "token {}".format(token)}
