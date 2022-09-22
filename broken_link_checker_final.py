@@ -3,8 +3,6 @@
 
 # # Libraries
 
-# In[126]:
-
 
 from usp.tree import sitemap_tree_for_homepage
 from bs4 import BeautifulSoup
@@ -15,8 +13,6 @@ from datetime import datetime
 
 
 # # Lists & Other Necessities
-
-# In[129]:
 
 
 #Sitemap listpages
@@ -54,8 +50,6 @@ tablehead = "| URL | Broken Link | Anchor | Code |" + "\n" + "| ------------- | 
 
 
 # # Functions
-
-# In[138]:
 
 
 #Put all pages from sitemap in listPages_Raw
@@ -281,8 +275,6 @@ def push_issue_git():
 
 
 # # Execute Functions
-
-# In[132]:
 
 
 getPagesFromSitemap()
