@@ -17,7 +17,6 @@ jobs:
           python -m pip install "bs4"
           python -m pip install "requests"
           python -m pip install "pandas"
-          python3 -m pip install "json"
           python -m pip install "datetime"
           python -m pip install "ultimate-sitemap-parser"
           
