@@ -1,0 +1,25 @@
+name: broken-link-checker
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "bs4"
+          python -m pip install "requests"
+          python -m pip install "pandas"
+          python -m pip install "datetime"
+          python -m pip install "ultimate-sitemap-parser"
+          
+      - name: execute broken link script # run the run.py to get the latest data
+        run: |
+          python broken_link_checker_final.py
