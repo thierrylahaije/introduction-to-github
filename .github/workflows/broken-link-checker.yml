@@ -1,5 +1,7 @@
 name: broken-link-checker
-on: [push]
+on:
+  schedule:
+    - cron: '59 23 * * 5'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,5 +23,7 @@ jobs:
           python -m pip install "ultimate-sitemap-parser"
           
       - name: execute broken link script
+        env: 
+          GIT_TOKEN: ${{ secrets.SECRET_GIT_TOKEN }}
         run: |
           python broken_link_checker_final.py
