@@ -10,6 +10,7 @@ import requests
 import pandas as pd
 import json
 from datetime import datetime
+import os
 
 
 # # Lists & Other Necessities
@@ -34,8 +35,8 @@ brokenLinkLocation = []
 #set user agent
 user_agent = {'User-agent': 'Mozilla/5.0'} 
 
-#git token
-token = "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"
+#git token by git secret
+token = os.environ['GIT_TOKEN']
 
 #git headers authorization
 headers = {"Authorization" : "token {}".format(token)}
